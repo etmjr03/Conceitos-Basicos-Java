@@ -1,8 +1,33 @@
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		System.out.println("Digite o nome, idade, número com casas decimais e uma letra:");
+		
+		Locale.setDefault(Locale.US);
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		String name;
+		int numero;
+		double numeroDouble;
+		char valorChar;
+		
+		name = entrada.next();
+		numero = entrada.nextInt();
+		numeroDouble = entrada.nextDouble();
+		valorChar = entrada.next().charAt(0);
+		
+		System.out.println("O nome digitado foi: " + name);
+		System.out.println("O número digitado foi: " + numero);
+		System.out.printf("O número com casas decimais separado por '.' digitado foi: %.2f\n", numeroDouble);
+		System.out.println("A letra digitada foi: " + valorChar);
+		
+		entrada.close();
+		
 		
 		int num = 32;
 		double num2 = 10.12345;
@@ -35,6 +60,13 @@ public class Main {
 		double price2 = 650.50;
 		double measure = 53.234567;
 		
+		double a;
+		int b;
+		
+		a = 5.0;
+		b = (int) a;
+		
+		System.out.println(b);
 		System.out.printf("Products:\n%s, which price is $ %.2f.\n", product1, price1);
 		System.out.printf("%s, which price is $ %.2f.\n\n", product2, price2);
 		System.out.printf("Record: %d years old, code %s and gender: %c\n\n", age, code, gender);
